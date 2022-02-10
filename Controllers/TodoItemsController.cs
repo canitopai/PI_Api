@@ -5,18 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Data;
 using TodoApi.Models;
 
 namespace TodoApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/TodoItems")]
     [ApiController]
     public class TodoItemsController : ControllerBase
     {
-        private readonly TodoApiContext _context;
+        private readonly TodoContext _context;
 
-        public TodoItemsController(TodoApiContext context)
+        public TodoItemsController(TodoContext context)
         {
             _context = context;
         }
